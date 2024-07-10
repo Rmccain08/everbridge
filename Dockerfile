@@ -1,2 +1,11 @@
-# Provide Dockerfile here to build image for your app
+FROM python:3.9-slim
+
+WORKDIR /app
+
+COPY src/requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+
+COPY src/app.py app.py
+
+CMD ["python", "app.py"]
 

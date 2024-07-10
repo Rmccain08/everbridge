@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency-conversion-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currency-conversion-api
+  template:
+    metadata:
+      labels:
+        app: currency-conversion-api
+    spec:
+      containers:
+      - name: currency-conversion-api
+        image: currency-conversion-api:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 5000
+
