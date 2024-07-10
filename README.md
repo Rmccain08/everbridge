@@ -32,5 +32,9 @@ You can test via:
 
 curl "http://localhost:30000/convert?from=XXX&to=YYY"
 
+OR
+
+Insert this into your browser: http://localhost:30000/convert?from=XXX&to=YYY
+
 Replace XXX and YYY with desired currencies
 
